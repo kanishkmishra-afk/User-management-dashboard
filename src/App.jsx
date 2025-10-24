@@ -45,6 +45,8 @@ function App() {
   }, []);
 
   const addUser = (newUser) => {
+    console.log("here");
+    
     const userWithId = {
       ...newUser,
       id: Date.now(), // Simple ID generation for local users
