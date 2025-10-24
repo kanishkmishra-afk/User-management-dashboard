@@ -3,6 +3,9 @@
 
 A modern, responsive dashboard built with React and Vite for managing users. Includes dark mode, role-based access UI, and a clean, scalable codebase ready for real-world use or expansion.
 
+## Approach
+This dashboard was designed with scalability, maintainability, and user experience as the main priorities. The application is structured with reusable React functional components, separating logic (hooks, context) and presentation (UI components) for clarity and future extension. The dark mode toggle uses React state/context to apply theming smoothly across the app. Linting and best practices (ESLint, clear folder structure) ensure consistent, high-quality code and make collaboration straightforward.
+
 ## Features
 
 - User list view and management actions
