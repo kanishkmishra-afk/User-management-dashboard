@@ -50,8 +50,6 @@ The app should now be running at [http://localhost:5173](http://localhost:5173).
 
 - `src/components` – Reusable UI components (Tables, Dialogs, Nav, ThemeToggle, etc.)
 - `src/pages` – Main pages/routes (Dashboard, User Forms, etc.)
-- `src/hooks` – Custom React hooks (if any)
-- `src/styles` – CSS or Tailwind configuration
 - `src/context` – Theme context/provider for dark mode
 
 ## Technologies Used
