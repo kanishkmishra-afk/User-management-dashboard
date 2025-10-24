@@ -58,7 +58,7 @@ The app should now be running at [http://localhost:5173](http://localhost:5173).
 - Vite (fast dev/build tool)
 - JavaScript (98%+)
 - ESLint
-- HTML, CSS for layout and styling
+- HTML, Tailwind CSS for layout and styling
 
 ## Notable Features
 
