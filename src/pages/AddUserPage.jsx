@@ -81,18 +81,18 @@ const AddUserPage = ({onAddUser}) => {
      <div className="max-w-2xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Add New User</h1>
-        <p className="mt-2 text-gray-600">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Add New User</h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-300">
           Fill in the form below to add a new user to the system
         </p>
       </div>
 
       {/* Form */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
               Full Name *
             </label>
             <input
@@ -101,7 +101,7 @@ const AddUserPage = ({onAddUser}) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-gray-100 ${
                 errors.name ? 'border-red-300' : 'border-gray-300'
               }`}
               placeholder="Enter full name"
@@ -113,7 +113,7 @@ const AddUserPage = ({onAddUser}) => {
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
               Email Address *
             </label>
             <input
@@ -122,7 +122,7 @@ const AddUserPage = ({onAddUser}) => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-gray-100 ${
                 errors.email ? 'border-red-300' : 'border-gray-300'
               }`}
               placeholder="Enter email address"
@@ -134,7 +134,7 @@ const AddUserPage = ({onAddUser}) => {
 
           {/* Phone Field */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
               Phone Number *
             </label>
             <input
@@ -143,7 +143,7 @@ const AddUserPage = ({onAddUser}) => {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-gray-100 ${
                 errors.phone ? 'border-red-300' : 'border-gray-300'
               }`}
               placeholder="Enter phone number"
@@ -155,7 +155,7 @@ const AddUserPage = ({onAddUser}) => {
 
           {/* Company Field */}
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
               Company Name *
             </label>
             <input
@@ -164,7 +164,7 @@ const AddUserPage = ({onAddUser}) => {
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+              className={`block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-gray-100 ${
                 errors.company ? 'border-red-300' : 'border-gray-300'
               }`}
               placeholder="Enter company name"
@@ -179,7 +179,7 @@ const AddUserPage = ({onAddUser}) => {
             <button
               type="button"
               onClick={() => navigate('/')}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600"
             >
               Cancel
             </button>

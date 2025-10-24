@@ -33,7 +33,7 @@ const UserDetailsPage = ({ users }) => {
       <div className="mb-6">
         <Link
           to="/"
-          className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+          className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 transition-colors"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -43,19 +43,19 @@ const UserDetailsPage = ({ users }) => {
       </div>
 
       {/* User Details Card */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8">
           <div className="flex items-center space-x-6">
-            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-              <span className="text-blue-600 font-bold text-2xl">
+            <div className="w-20 h-20 bg-white dark:bg-gray-700 bg-opacity-20 rounded-full flex items-center justify-center">
+              <span className="text-blue-600 dark:text-blue-400 font-bold text-2xl">
                 {user.name.charAt(0).toUpperCase()}
               </span>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-white">{user.name}</h1>
-              <p className="text-blue-100 text-lg">{user.email}</p>
-              <p className="text-blue-200">{user.phone}</p>
+              <h1 className="text-3xl font-bold text-white dark:text-gray-100">{user.name}</h1>
+              <p className="text-blue-100 dark:text-blue-400 text-lg">{user.email}</p>
+              <p className="text-blue-200 dark:text-blue-500">{user.phone}</p>
             </div>
           </div>
         </div>
@@ -65,33 +65,33 @@ const UserDetailsPage = ({ users }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Personal Information */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Personal Information</h2>
               <dl className="space-y-3">
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Full Name</dt>
-                  <dd className="text-sm text-gray-900">{user.name}</dd>
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Full Name</dt>
+                  <dd className="text-sm text-gray-900 dark:text-gray-200">{user.name}</dd>
                 </div>
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Email Address</dt>
-                  <dd className="text-sm text-gray-900">{user.email}</dd>
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Email Address</dt>
+                  <dd className="text-sm text-gray-900 dark:text-gray-200">{user.email}</dd>
                 </div>
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Phone Number</dt>
-                  <dd className="text-sm text-gray-900">{user.phone}</dd>
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone Number</dt>
+                  <dd className="text-sm text-gray-900 dark:text-gray-200">{user.phone}</dd>
                 </div>
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Username</dt>
-                  <dd className="text-sm text-gray-900">{user.username}</dd>
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Username</dt>
+                  <dd className="text-sm text-gray-900 dark:text-gray-200">{user.username}</dd>
                 </div>
                 {user.website && (
                   <div>
-                    <dt className="text-sm font-medium text-gray-500">Website</dt>
-                    <dd className="text-sm text-gray-900">
+                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Website</dt>
+                    <dd className="text-sm text-gray-900 dark:text-gray-200 ">
                       <a 
                         href={user.website.startsWith('http') ? user.website : `https://${user.website}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800"
                       >
                         {user.website}
                       </a>
@@ -103,22 +103,22 @@ const UserDetailsPage = ({ users }) => {
 
             {/* Company Information */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">Company Information</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Company Information</h2>
               <dl className="space-y-3">
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Company Name</dt>
-                  <dd className="text-sm text-gray-900">{user.company?.name || 'N/A'}</dd>
+                  <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Company Name</dt>
+                  <dd className="text-sm text-gray-900 dark:text-gray-200">{user.company?.name || 'N/A'}</dd>
                 </div>
                 {user.company?.catchPhrase && (
                   <div>
-                    <dt className="text-sm font-medium text-gray-500">Catch Phrase</dt>
-                    <dd className="text-sm text-gray-900">{user.company.catchPhrase}</dd>
+                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Catch Phrase</dt>
+                    <dd className="text-sm text-gray-900 dark:text-gray-200">{user.company.catchPhrase}</dd>
                   </div>
                 )}
                 {user.company?.bs && (
                   <div>
-                    <dt className="text-sm font-medium text-gray-500">Business Strategy</dt>
-                    <dd className="text-sm text-gray-900">{user.company.bs}</dd>
+                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Business Strategy</dt>
+                    <dd className="text-sm text-gray-900 dark:text-gray-200">{user.company.bs}</dd>
                   </div>
                 )}
               </dl>
@@ -128,25 +128,25 @@ const UserDetailsPage = ({ users }) => {
           {/* Address Information */}
           {user.address && (
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">Address</h2>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Address</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <dl className="space-y-3">
                     <div>
-                      <dt className="text-sm font-medium text-gray-500">Street</dt>
-                      <dd className="text-sm text-gray-900">{user.address.street || 'N/A'}</dd>
+                      <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Street</dt>
+                      <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.street || 'N/A'}</dd>
                     </div>
                     <div>
-                      <dt className="text-sm font-medium text-gray-500">Suite</dt>
-                      <dd className="text-sm text-gray-900">{user.address.suite || 'N/A'}</dd>
+                      <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Suite</dt>
+                      <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.suite || 'N/A'}</dd>
                     </div>
                     <div>
-                      <dt className="text-sm font-medium text-gray-500">City</dt>
-                      <dd className="text-sm text-gray-900">{user.address.city || 'N/A'}</dd>
+                      <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">City</dt>
+                      <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.city || 'N/A'}</dd>
                     </div>
                     <div>
-                      <dt className="text-sm font-medium text-gray-500">Zip Code</dt>
-                      <dd className="text-sm text-gray-900">{user.address.zipcode || 'N/A'}</dd>
+                      <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Zip Code</dt>
+                      <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.zipcode || 'N/A'}</dd>
                     </div>
                   </dl>
                 </div>
@@ -154,12 +154,12 @@ const UserDetailsPage = ({ users }) => {
                   <div>
                     <dl className="space-y-3">
                       <div>
-                        <dt className="text-sm font-medium text-gray-500">Latitude</dt>
-                        <dd className="text-sm text-gray-900">{user.address.geo.lat || 'N/A'}</dd>
+                        <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Latitude</dt>
+                        <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.geo.lat || 'N/A'}</dd>
                       </div>
                       <div>
-                        <dt className="text-sm font-medium text-gray-500">Longitude</dt>
-                        <dd className="text-sm text-gray-900">{user.address.geo.lng || 'N/A'}</dd>
+                        <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Longitude</dt>
+                        <dd className="text-sm text-gray-900 dark:text-gray-200">{user.address.geo.lng || 'N/A'}</dd>
                       </div>
                     </dl>
                   </div>
