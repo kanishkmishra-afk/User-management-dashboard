@@ -1,16 +1,78 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# User Management Dashboard
 
-Currently, two official plugins are available:
+A modern, responsive dashboard built with React and Vite for managing users. Includes dark mode, role-based access UI, and a clean, scalable codebase ready for real-world use or expansion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- User list view and management actions
+- Responsive design for desktop and mobile
+- Dark mode toggle for better UX
+- Built with React (Hooks), Vite, and modular file structure
+- ESLint for code quality and consistency
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Demo
 
-## Expanding the ESLint configuration
+Check out the live demo:  
+[user-management-dashboard-two-olive.vercel.app](https://user-management-dashboard-two-olive.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/kanishkmishra-afk/User-management-dashboard.git
+cd User-management-dashboard
+npm install
+# or yarn install
+```
+
+### Running Locally
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The app should now be running at [http://localhost:5173](http://localhost:5173).
+
+## Project Structure
+
+- `src/components` – Reusable UI components (Tables, Dialogs, Nav, ThemeToggle, etc.)
+- `src/pages` – Main pages/routes (Dashboard, User Forms, etc.)
+- `src/hooks` – Custom React hooks (if any)
+- `src/styles` – CSS or Tailwind configuration
+- `src/context` – Theme context/provider for dark mode
+
+## Technologies Used
+
+- React (with functional components and hooks)
+- Vite (fast dev/build tool)
+- JavaScript (98%+)
+- ESLint
+- HTML, CSS for layout and styling
+
+## Notable Features
+
+- **Dark Theme Toggle**  
+  Switch between light and dark themes instantly across the entire dashboard.
+
+- **Rapid Development with Vite**  
+  Enjoy instant hot reloading and fast builds.
+
+- **Extendable**  
+  Modular structure—easy to add new features like filter/search.
+
+## Future Improvements
+
+- Connect to a backend API for persistent storage
+- Add authentication (JWT/session)
+- User role management and access levels
+- More filters, sorting, and bulk actions
